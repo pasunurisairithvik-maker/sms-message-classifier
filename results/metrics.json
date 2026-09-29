@@ -1,0 +1,76 @@
+{
+  "dataset": {
+    "original_rows": 5574,
+    "unique_rows": 5159,
+    "conflicting_rows_removed": 0,
+    "duplicate_rows_removed": 415
+  },
+  "split": {
+    "train": 3611,
+    "validation": 774,
+    "test": 774,
+    "seed": 42
+  },
+  "versions": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0"
+  },
+  "dataset_sha256": "c9ca2be9b60921499e30de05a0350c9bee1ba7cfc98bc03d1547819938a022d0",
+  "validation_macro_f1": {
+    "logistic_ngrams_1": 0.8815021613832853,
+    "logistic_ngrams_2": 0.8731263090793189,
+    "svm_ngrams_1": 0.9387951305795443,
+    "svm_ngrams_2": 0.9559941520467836
+  },
+  "selected_model": "svm_ngrams_2",
+  "test_macro_f1": 0.9662350538359343,
+  "test_accuracy": 0.9857881136950905,
+  "majority_baseline_macro_f1": 0.4669421487603306,
+  "classification_report": {
+    "ham": {
+      "precision": 0.9868613138686131,
+      "recall": 0.9970501474926253,
+      "f1-score": 0.991929567131328,
+      "support": 678.0
+    },
+    "spam": {
+      "precision": 0.9775280898876404,
+      "recall": 0.90625,
+      "f1-score": 0.9405405405405406,
+      "support": 96.0
+    },
+    "accuracy": 0.9857881136950905,
+    "macro avg": {
+      "precision": 0.9821947018781267,
+      "recall": 0.9516500737463127,
+      "f1-score": 0.9662350538359343,
+      "support": 774.0
+    },
+    "weighted avg": {
+      "precision": 0.9857037046926785,
+      "recall": 0.9857881136950905,
+      "f1-score": 0.9855557343758814,
+      "support": 774.0
+    }
+  },
+  "confusion_matrix_labels": [
+    "ham",
+    "spam"
+  ],
+  "confusion_matrix": [
+    [
+      676,
+      2
+    ],
+    [
+      9,
+      87
+    ]
+  ],
+  "limitations": [
+    "Old English-language SMS dataset; not representative of current scams or support tickets.",
+    "Normalized exact duplicates removed; near-duplicate template leakage can remain.",
+    "One split seed; do not infer statistical significance.",
+    "This is a benchmark prototype, not a security product."
+  ]
+}
