@@ -14,7 +14,7 @@ def load_dataset(path):
         total=0
         for row in reader:
             total+=1
-            if row['label'] not in {'ham','spam'} or not normalize(row['text']):
+            if set(row) != {'label','text'} or not isinstance(row.get('text'),str) or row['label'] not in {'ham','spam'} or not normalize(row['text']):
                 raise ValueError('Each row needs a ham/spam label and nonempty text')
             groups[normalize(row['text'])].append(row)
     rows=[]; conflicts=0

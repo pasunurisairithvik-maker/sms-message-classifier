@@ -14,6 +14,12 @@ class ClassifierTests(unittest.TestCase):
             self.assertEqual(len(rows),1)
             self.assertEqual(stats['duplicate_rows_removed'],1)
             self.assertEqual(stats['conflicting_rows_removed'],2)
+    def test_malformed_dataset_rows(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'data.csv'
+            for row in ['ham','ham,hello,unexpected']:
+                path.write_text('label,text\n'+row+'\n')
+                with self.assertRaises(ValueError):load_dataset(path)
     def test_missing_model_and_blank_message(self):
         with tempfile.TemporaryDirectory() as tmp:
             client=TestClient(create_app(Path(tmp)/'absent.joblib'))
