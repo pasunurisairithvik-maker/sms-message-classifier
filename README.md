@@ -1,4 +1,6 @@
 # SMS Message Classifier
+
+Release 1.0 within its documented scope. See [release and operating notes](RELEASE.md).
 A Python portfolio experiment comparing Logistic Regression and Linear SVM, with unigram/bigram TF-IDF features, on the public UCI SMS Spam Collection. Includes a browser demo, inference API, tests, and measured results.
 
 ## Run (Python 3.11+)
