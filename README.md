@@ -29,5 +29,5 @@ Integration tests use synthetic messages only to test execution. Published metri
 ## Limitations and safe use
 Not original research, not a security product, not an LLM. Older English SMS does not represent current scams. Near-duplicate templates may remain even after exact deduplication. No multilingual evaluation or statistical-significance claim. API has no authentication/rate limiting: run locally only. No confidence score is returned because an SVM margin is not a calibrated probability. Never load someone else's joblib model; serialized artifacts can execute code. Retrain the model locally instead.
 
-## Attribution and student work
-See DATASET.md. Initial implementation used AI assistance. Review and modify it before claiming contributions; see STUDENT_GUIDE.md. Human error categorization and broader evaluation are student tasks, not completed claims.
+## Dataset and evaluation
+See DATASET.md for dataset attribution and STUDENT_GUIDE.md for the implementation walkthrough. Manual error categorization and broader evaluation remain future work.
